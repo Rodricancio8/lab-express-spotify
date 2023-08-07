@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HOLA</title>
+</head>
+<body>
+     <h1>Artist Albums</h1>
+
+  {{#if albums}}
+    <ul>
+      {{#each albums}}
+        <li>
+          <h2>{{name}}</h2>
+          {{#if images.length}}
+            <img src="{{images.[0].url}}" alt="{{name}}">
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>No albums found.</p>
+  {{/if}}
+    
+</body>
+</html>
